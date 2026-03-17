@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <div class="album-art paused" id="albumArt">
+            🎵
+        </div>
+
+        <div class="song-info">
+            <div class="song-title" id="songTitle">Select a song to play</div>
+            <div class="song-artist" id="songArtist">Various Artists</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-info">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" onclick="previousSong()">⏮</button>
+            <button class="control-btn play-btn" id="playBtn" onclick="togglePlay()">▶️</button>
+            <button class="control-btn" onclick="nextSong()">⏭</button>
+        </div>
+
+        <div class="volume-control">
+            <span class="volume-icon">🔊</span>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+        </div>
+
+        <div class="playlist" id="playlist"></div>
+
+        <div class="note">
+            📝 This is a demo player with simulated playback. In a real app, you would use the Audio API with actual audio files.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
